@@ -1,12 +1,21 @@
-import math
+from pyquadratic.pyquadratic import *
 
-def quadratic_solver(a,b,c):
-    answer = 10
-    return answer
-    # implement quadratic formula solver using math and input outside of function.
+def check_sign(value):
+    if value > 0:
+        values.append("+")
 
 if __name__ == "__main__":
-    a = input("Enter value for a: ")
-    b = input("Enter value for b: ")
-    c = input("Enter value for c: ")
-    print(quadratic_solver(a,b,c))
+    values = []
+    a = int(input("Enter value for a: "))
+    values.append(a)
+    values.append("x^2")
+    b = int(input("Enter value for b: "))
+    check_sign(b)
+    values.append(b)
+    values.append("x")
+    c = int(input("Enter value for c: "))
+    check_sign(c)
+    values.append(c)
+    result = ''.join(str(x) for x in values)
+    print(result)
+    print(realSolution(result))
