@@ -17,5 +17,5 @@ if __name__ == "__main__":
     check_sign(c)
     values.append(c)
     result = ''.join(str(x) for x in values)
-    print(result)
-    print(realSolution(result))
+    print("Expression: " + result)
+    print("Answer: " + str(realSolution(result)))
